@@ -2,11 +2,17 @@
 	
 [![download](https://img.shields.io/badge/download-latest-blue.svg)](https://markdownmonster.west-wind.com/download) [![NuGet](https://img.shields.io/chocolatey/v/MarkdownMonster.svg)](https://chocolatey.org/packages/MarkdownMonster) [![](https://img.shields.io/chocolatey/dt/MarkdownMonster.svg)](https://chocolatey.org/packages/MarkdownMonster) [![upgrade](https://img.shields.io/badge/v4-upgrade-blue.svg)](https://markdownmonster.west-wind.com/purchase#upgrades)
 
-## 4.5 Beta
-<small>*not released yet*</small>
+## 4.5.1
+
+[Release Post](https://markdownmonster.west-wind.com/blog/posts/2026/Sep/07/Markdown-Monster-45-Release-Notes) &bull; [Download](https://markdownmonster.west-wind.com/download)
+
+<small>Sept 8th, 2026</small>
 
 * **Change Editor Platform to Monaco Editor**  
 Refactored the editor from ACE Editor to run on [Monaco Editor](https://microsoft.github.io/monaco-editor/) which is the same editor core that is used by VS Code. Monaco enables a host of features not available in ACE with a more complete and modern editor API that is more customizable and programmable and more agent friendly than ACE. In short it allows us more control over low level editor features.
+
+* **Window Resizing now preserves Editor/Preview Size Ratio**  
+Changed the behavior of the editor on window resizing, so that the editor and preview width stay at the same ratio set via splitter bar resizing. Previously preview width was fixed and editor width adjusted on window resizing. The new behavior is more consistent and requires less tweaking of the splitter placement.
 
 * **Add Inline Diff Viewer**  
 MM now has an inline Diff Viewer that's accessible from the Tab and Editor and Folder Browser context menus. The Folder Browser version shows Git differences between the current file and its last GIT commit. The Editor versions (Tab and Editor Context menu) show current file differences vs. disk file if the file has changes. The view is shown as inline .diff that shows changes inside of the active document with changed and unchanged text stacked in green (added) and red (deleted).
@@ -36,8 +42,6 @@ We've updated HighlighJs to the latest version available which provides addition
 ## 4.4
 <small>*June 1st, 2026*</small>
 
-* **Window Resizing now preserves Editor/Preview Size Ratio**  
-Changed the behavior of the editor on window resizing, so that the editor and preview width stay at the same ratio set via splitter bar resizing. Previously preview width was fixed and editor width adjusted on window resizing. The new behavior is more consistent and requires less tweaking of the splitter placement.
 
 * **Smoother Preview to Editor Syncing**  
 Reworked the way the preview syncs back into the preview editor after scrolling, preventing the editor from recursively readjusting the preview on scroll. Previously behavior caused occasional jumpiness in the preview when depending on scroll positioning in the view port, when bi-directional preview sync was enabled. This fix also improves scroll performance on larger documents as it forces fewer refreshes.
